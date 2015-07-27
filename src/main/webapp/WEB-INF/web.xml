@@ -5,12 +5,26 @@
 	<servlet>
 		<display-name>HelloWorldServlet</display-name>
 		<servlet-name>HelloWorldServlet</servlet-name>
-		<servlet-class>com.codetutr.HelloWorldServlet</servlet-class>
+		<servlet-class>com.michael.servlet.DateEchoingServlet</servlet-class>
 	</servlet>
-
+	<filter>
+		<filter-name>some dummy filter</filter-name>		
+		<filter-class>com.michael.filter.DummyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>some dummy filter</filter-name>
+		<servlet-name>HelloWorldServlet</servlet-name>
+	</filter-mapping>
 	<servlet-mapping>
 		<servlet-name>HelloWorldServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/echoDate</url-pattern>
 	</servlet-mapping>
-
+	<listener>
+		<listener-class>com.michael.listener.DummyServletListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.michael.listener.DummyHttpSessionActivationListener</listener-class>
+	</listener>
+	
 </web-app>
+

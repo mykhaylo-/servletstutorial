@@ -13,7 +13,6 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'com.bmuschko.tomcat'
 
 repositories {
-	jcenter()
 	mavenCentral()
 }
 
